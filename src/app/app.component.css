@@ -1,0 +1,43 @@
+.header{
+    background-color: black;
+    color: white;
+    align-items: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.row{
+    align-items: center;
+}
+hr{
+    background-color: white;
+}
+
+.loading-overlay{
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (min-width: 500px){
+    .row{
+        flex-wrap: nowrap;
+    }
+    .row>div{
+        flex-shrink: 2;
+    }
+    .row>.header-content{
+        flex-shrink: 1;
+    }
+}
+
+@media (max-width: 499px){
+    .row{
+        flex-wrap: nowrap;
+    }
+    .row>div{
+        flex-basis: 0%;
+    }
+    .row>.header-content{
+        flex-basis: 100%;
+    }
+}

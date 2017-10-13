@@ -1,3 +1,40 @@
-<h1>
-  {{title}}
-</h1>
+<div class="header container-fluid">
+    <div class="row">
+        <div class="col-md-1">
+            <img src="../assets/images/rflogo.jpg" alt="rf-logo" class="img-fluid rounded-circle">
+        </div>
+        <div class="col-md-9 header-content">
+            <h1>Roger Federer</h1>
+            <hr>
+            <h4>The Greatest Of All Time</h4>
+        </div>
+        <div class="col-md-2">
+            <img src="../assets/images/rfhead.jpg" alt="" class="img-fluid rounded-circle" id="header-image">
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-toggleable-md sticky-top navbar-inverse bg-primary">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" routerLink="/">The Maestro</a>
+    <div id="navbarSupportedContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/bio" routerLinkActive="active">Bio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/newsfeed" routerLinkActive="active">NewsFeed</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<router-outlet></router-outlet>
+<div class="container" *ngIf="loading">
+    <div class="row loading-overlay">
+        <md-progress-circle color="primary" mode="indeterminate"></md-progress-circle>
+    </div>
+</div>

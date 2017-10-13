@@ -1,0 +1,101 @@
+<div class="container">
+  <div id="carouselImages" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselImages" data-slide-to="1" class="active"></li>
+      <li data-target="#carouselImages" data-slide-to="2"></li>
+      <li data-target="#carouselImages" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <img class="d-block img-fluid" src="/src/assets/images/banner.jpg" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block img-fluid" src="/src/assets/images/banner2.jpg" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block img-fluid" src="/src/assets/images/banner3.jpg" alt="First slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselImages" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselImages" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <div id="carouselQuotes" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item" *ngFor = "let q of quotes" [ngClass]="{active: q === quotes[0]}">
+        <div class="card" style="width: 100%">
+          <div class="card-block">
+            <blockquote>
+              <h5>{{ q.quote }}</h5>
+              <footer>{{ q.author }}</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <md-card>
+    <md-card-title>Bio</md-card-title>
+    <md-card-content>
+      <div class="row">
+        <div class="col-md-9">
+          <p>Roger Federer is a professional tennis player currently ranked 10 by the Association
+            of Tennis Professionals (ATP). Federer has won an open era
+            record 18 Men's Singles Grandslam titles and was ranked No.1 in the world for a record
+            302 weeks, including a record 237 consecutive weeks. Federer is considered the greatest
+            tennis player of all time by players, commentators and fans all around the world.</p>
+            <p> Federer turned professional in 1998 and was continuously ranked in the top 10 from October 2002 to November 2016. 
+              After his victory over Rafael Nadal in the 2017 Australian Open Final, John McEnroe concluded that 
+              "Federer [had] cemented himself as the greatest player of all time".
+            </p>
+            <a routerLink="/bio" md-raised-button>Read More</a>
+        </div>
+        <div class="col-md-3">
+          <img src="/src/assets/images/rf2012.jpg" alt="Federer at AUS open 2017" class="img-fluid">
+        </div>
+      </div>
+    </md-card-content>
+  </md-card>
+  <md-card>
+    <md-card-title>Records</md-card-title>
+    <md-card-content>
+      <div class="row">
+        <div class="col-md-3">
+          <img src="/src/assets/images/w2012.jpg" alt="Federer at Masters Cup 2007" class="img-fluid">
+        </div>
+        <div class="col-md-9">
+          <p>Roger Federer has won an open record 18 Men's singles grandslams. Federer holds the record for
+            the most weeks at No.1 ranking (302 weeks), as well as most consecutive weeks as No.1 (237 weeks).
+            He has won a record 7 Wimbledon, 5 US Open, and 6 World Tour Finals (previously Masters Cup) including
+            record 5 consecutive titles at both Wimbledon and US Open.</p>
+            <a routerLink="/newsfeed" md-raised-button>Read More</a>
+        </div>
+      </div>
+    </md-card-content>
+  </md-card>
+  <md-card>
+    <md-card-title>NewsFeed</md-card-title>
+    <md-card-content>
+      <div class="row">
+        <div class="col-md-9">
+          <p>Federer won his 18th grandslam at the Australian Open 2017 defeating long time rival Rafael Nadal of Spain
+      in 5 sets. Score: 6-4 3-6 6-1 3-6 6-3. Federer made a dramatic comeback from 3-1 down in the fifth set to clinch
+      his 5th Australian Open, making him the only player in Open Era to win 5 times at 3 different slams (AO, W, US).
+      Read latest news about Federer.</p>
+          <a routerLink="/newsfeed" md-raised-button>Read More</a>
+        </div>
+        <div class="col-md-3">
+          <img src="/src/assets/images/aus17.jpg" alt="Federer at Masters Cup 2007" class="img-fluid">
+        </div>
+      </div>
+    </md-card-content>
+  </md-card>
+</div>
+

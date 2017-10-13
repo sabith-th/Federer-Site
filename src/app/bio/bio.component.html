@@ -1,0 +1,27 @@
+<div class="container">
+  <!--<div class="row">
+    <div class="col-md-2" style="border-right: 1px solid lightgrey">
+      <nav class="nav flex-column justify-content-center">
+        <a class="nav-link" routerLink="gs" routerLinkActive="active">Grand Slams</a>
+        <a class="nav-link" routerLink="wtf" routerLinkActive="active">ATP World Tour Finals</a>
+        <a class="nav-link" routerLink="masters" routerLinkActive="active">ATP Masters 1000</a>
+      </nav>
+      <md-list>
+        <a md-list-item routerLink="gs" routerLinkActive="active">Grand Slams</a>
+        <a md-list-item routerLink="wtf" routerLinkActive="active">ATP World Tour Finals</a>
+        <a md-list-item routerLink="masters" routerLinkActive="active">ATP Masters 1000</a>
+      </md-list>
+    </div>
+    <div class="col-md-10">
+      <h3>Bio Works!</h3>
+      <router-outlet></router-outlet>
+    </div>
+  </div>-->
+  <h3>Bio Works</h3>
+  <nav md-tab-nav-bar>
+    <a class="nav-link" md-tab-link routerLink="gs" routerLinkActive="active">Grand Slams</a>
+    <a class="nav-link" md-tab-link routerLink="wtf" routerLinkActive="active">ATP World Tour Finals</a>
+    <a class="nav-link" md-tab-link routerLink="masters" routerLinkActive="active">ATP Masters 1000</a>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

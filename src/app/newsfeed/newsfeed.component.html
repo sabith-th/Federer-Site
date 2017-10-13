@@ -1,0 +1,16 @@
+<div class="container" 
+infinite-scroll 
+[infiniteScrollDistance]=1
+[infiniteScrollThrottle]=500
+(scrolled)="onScroll()">
+  <h3>Latest news about Roger Federer</h3>
+  <h5>Powered by The New York Times</h5>
+  <div class="card" *ngFor="let new of news">
+    <div class="card-block">
+      <h4 class="card-title">{{ new.headline.main}} </h4>
+      <h6 class="card-subtitle" *ngIf="new.byline.original"> {{ new.byline.original }}</h6>
+      <p class="card-text">{{ new.lead_paragraph }}</p>
+      <a [href]="new.web_url" class="card-link" target="_blank">Read More</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+.container{
+    padding-top: 10px;
+}
+.carousel-item{
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+}
+a{
+    text-decoration: none;
+}
+#carouselImages{
+    margin-bottom: 5px;
+}
+md-card{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@media (max-width: 768px){
+    .carousel-item{
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 500px){
+    .carousel-item{
+        max-height: 175px;
+    }
+    md-card-content>.row>.col-md-3{
+        order: -1;
+    }
+}
